@@ -1,0 +1,97 @@
+@import "./SASS/reset";
+@import "./SASS/variables";
+
+
+
+
+main {
+  min-height: 100vh;
+  padding: 0 5%;
+  margin-left: 8rem;
+  margin-bottom: 10rem;
+  color: $dark;
+}
+
+
+
+.btn-container {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.table-title {
+  background-color: rgb(42, 42, 42);
+  color: white;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  background-color: $secondary;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: $primary;
+  width: 200px;
+  font-weight: bolder;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $white;
+
+
+    background-color: #14433e;
+  }
+
+}
+
+.text_container {
+  margin-top: 50px;
+
+  p {
+    text-align: center;
+  }
+
+}
+
+
+th,
+td {
+  border: 1px solid #14433e;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+th {
+  background-color: #63b66a;
+  text-transform: uppercase;
+  color: white;
+}

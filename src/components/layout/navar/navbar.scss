@@ -1,0 +1,23 @@
+.header {
+    background-color: #14433e;
+   
+    color: white;
+    padding: 20px 5%;
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                a {
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        color: #63b66a;
+                    }
+                }
+            }
+           
+        }
+    }
+}

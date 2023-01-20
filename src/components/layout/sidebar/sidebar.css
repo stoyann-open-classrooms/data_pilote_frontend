@@ -1,0 +1,22 @@
+.sidenav {
+  background-color: #14433e;
+  color: white;
+  width: 20%;
+  position: fixed;
+  padding: 0 10px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 80px;
+}
+.sidenav ul {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+.sidenav ul li a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=sidebar.css.map */

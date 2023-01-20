@@ -1,13 +1,126 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100;1,300&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62, 5%;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea {
+  border: none;
+  width: 100%;
+  background-color: rgb(199, 199, 199);
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  min-height: 100vh;
+  padding: 0 5%;
+  margin-left: 8rem;
+  margin-bottom: 10rem;
+  color: #041d1a;
+}
+
+.btn-container {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-container button {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.table-title {
+  background-color: rgb(42, 42, 42);
+  color: white;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  background-color: #63b66a;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #14433e;
+  width: 200px;
+  font-weight: bolder;
+  transition: all 0.3s;
+}
+button:hover {
+  color: rgb(227, 227, 227);
+  background-color: #14433e;
+}
+
+.text_container {
+  margin-top: 50px;
+}
+.text_container p {
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid #14433e;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+th {
+  background-color: #63b66a;
+  text-transform: uppercase;
+  color: white;
+}/*# sourceMappingURL=index.css.map */

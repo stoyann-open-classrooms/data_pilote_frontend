@@ -1,0 +1,16 @@
+.header {
+  background-color: #14433e;
+  color: white;
+  padding: 20px 5%;
+}
+.header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.header nav ul li a:hover {
+  color: #63b66a;
+}/*# sourceMappingURL=navbar.css.map */

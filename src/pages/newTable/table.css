@@ -1,0 +1,14 @@
+.text_container {
+  text-align: center;
+  background-color: grey;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.text_container p {
+  margin: 2rem;
+  line-height: 30px;
+}
+.text_container .icone {
+  font-size: 30px;
+}/*# sourceMappingURL=table.css.map */
