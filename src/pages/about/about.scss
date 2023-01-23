@@ -1,11 +1,19 @@
+@import "../../SASS/reset";
+@import "../../SASS/variables";
+
+
+
+
+
 .documentation {
     h1 {
-        background-color: rgb(2, 61, 31);
+        background-color: $primary;
         padding: 10px;
-        color: white;
+        color:  $white;
         text-transform: uppercase;
         font-weight: bolder;
         letter-spacing: 1.5px;
+        border-radius: $radius;
     }
     h2{
         background-color: rgb(66, 152, 108);
@@ -16,6 +24,7 @@
         margin-bottom: 25px;
         letter-spacing: 1.5px;
         text-decoration: none;
+        border-radius: $radius;
     }
     p{
         line-height: 1.5;

@@ -45,43 +45,43 @@ button {
   cursor: pointer;
 }
 
-.loadingSpinnerContainer {
+.modal {
+  position: absolute;
+  color: rgb(227, 227, 227);
+  border-radius: 1rem;
+  padding: 1rem;
+  top: 50%;
+  left: 50%;
+  max-width: 50rem;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5000;
+  right: 0;
+  height: 100vh;
+  z-index: 99999;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+.dialog_form {
   display: flex;
+  padding: 1rem 0.7rem;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
+  min-height: 200px;
+  background-color: #041d1a;
 }
 
-.loadingSpinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
-  border-color: #14433e transparent #14433e transparent;
-  border-radius: 50%;
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}/*# sourceMappingURL=spinner.css.map */
+.close_modal {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  width: 20px;
+}/*# sourceMappingURL=dialog.css.map */

@@ -1,3 +1,6 @@
+@import "../../../SASS/reset";
+@import "../../../SASS/variables";
+@import "../../../SASS/mixins";
 .loadingSpinnerContainer {
     position: fixed;
     top: 0;
@@ -16,7 +19,7 @@
     width: 64px;
     height: 64px;
     border: 8px solid;
-    border-color: #14433e transparent #14433e transparent;
+    border-color: $primary transparent $primary transparent;
     border-radius: 50%;
     animation: spin 1.2s linear infinite;
   }

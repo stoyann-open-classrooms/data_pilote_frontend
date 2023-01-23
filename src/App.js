@@ -13,6 +13,7 @@ import Tables from './pages/tables/Tables';
 import { HorodatedTableProvider } from './context/table/horodatedTables/horodatedTableContext';
 import { StaticTableProvider } from './context/table/staticTables/staticTableContext';
 import Sidebar from './components/layout/sidebar/Sidebar';
+import Pluviometrie from './pages/pluviometrie/Pluviometrie';
 function App() {
   return (
     <HorodatedTableProvider>
@@ -31,6 +32,7 @@ function App() {
              <Route path='/objectifs/637a3694e5fc335f796a4140' element={<Objectifs/>} />
              <Route path='/budget_heures_CHS/637a3694e5fc335f796a4860' element={<BudgetHeuresCHS/>} />
              <Route path='/rh/637a3694e5fc335f796a4141' element={<Rh/>} />
+             <Route path='/pluviometrie/637a3694e5fc335f796a4141' element={<Pluviometrie/>} />
              <Route path='/*' element={<NotFound/>} />
            </Routes>
         </main>

@@ -1,9 +1,11 @@
+import Dialog from '../../components/shared/modal/Dialog'
 import './links.css'
 
 function Links() {
   return (
     <div>
         <h1>Gerer les liens</h1>
+        <Dialog/>
 
         <div className="links_container">
             <div className="link">

@@ -1,0 +1,45 @@
+@mixin Primary_button {
+    background-color: $secondary;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: $primary;
+    width: 200px;
+    font-weight: bolder;
+    transition: all 0.3s;
+  
+    &:hover {
+      color: $white;
+  
+      background-color: #14433e;
+    }
+  }
+
+
+
+  @mixin action_btn {
+ 
+ border: none;
+
+    width: 200px;
+    font-weight: bolder;
+    transition: all 0.3s;
+  
+    &:hover {
+      color: $white;
+    }
+  }
+
+
+  @mixin  input {
+    box-shadow: $primary;
+    border: none;
+    background: #ffffff;
+    border-radius: 3rem;
+    height: 3rem;
+    width: 100%;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 3rem;
+    font-size: 1rem;
+  }
