@@ -1,3 +1,9 @@
+@import "../../SASS/reset";
+@import "../../SASS/variables";
+@import "../../SASS/mixins";
+
+
+
 .text_container {
     text-align: center;
   
@@ -11,4 +17,15 @@
     .icone{
         font-size: 30px;
     }
+}
+
+.submit_btn{
+ background-color: transparent !important;
+ border: solid 2px white;
+ height: 1.9rem;
+ color: white;
+  &:hover{
+    background-color: $secondary ;
+  }
+ 
 }

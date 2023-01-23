@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100;1,300&display=swap");
 *,
 ::before,
@@ -47,10 +48,9 @@ button {
 
 main {
   min-height: 100vh;
-  padding: 0 2% 0 8rem;
+  padding: 0 2% 0 10rem;
   margin-bottom: 10rem;
   color: #041d1a;
-  background-color: #f1fbf6;
 }
 
 .btn-container {
@@ -79,12 +79,40 @@ h2 {
 }
 
 .table-title {
-  background-color: rgb(42, 42, 42);
+  color: #14433e;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.table-title-item {
+  background-color: #14433e;
   color: white;
   margin: 20px;
   border-radius: 5px;
   text-align: center;
   padding: 10px;
+}
+
+.danger {
+  background-color: rgba(182, 30, 30, 0.526);
+  font-size: 0.6rem;
+  font-weight: bolder;
+  color: black;
+}
+.danger::before {
+  content: " ⚠️Ligne non pris en compte dans le rapport, car un champ est vide ou contient une erreur de saisie ⚠️";
+}
+
+.warning {
+  background-color: rgba(182, 30, 30, 0.526);
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: black;
+}
+.warning::before {
+  content: " ⚠️ Cette ligne contient une erreur de saisie! La ligne entiere ne sera pas pris en compte dans le rapport ⚠️";
 }
 
 button {
@@ -127,22 +155,40 @@ th {
   color: white;
 }
 
+.table-title {
+  padding: 1rem;
+}
+
 .text_input {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background: url("./image/add_input.svg") #ffffff 2.5% center no-repeat;
 }
 
-form {
+.form-modal {
   max-width: 500px;
   padding: 0 5%;
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-form input {
-  margin: 10px 0;
+.form-modal input {
+  margin: 5px 0;
+}
+.form-modal .btn-submit {
+  width: 100%;
+  margin-top: 1rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+}
+.form-modal .btn-submit:hover {
+  background-color: #63b66a;
+  border: 2px solid #63b66a;
 }
 
-.submit_btn {
-  width: 100%;
+.form-modal {
+  margin: 2rem 0;
+  display: flex;
 }/*# sourceMappingURL=index.css.map */

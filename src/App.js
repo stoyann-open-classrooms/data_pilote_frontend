@@ -14,11 +14,13 @@ import { HorodatedTableProvider } from './context/table/horodatedTables/horodate
 import { StaticTableProvider } from './context/table/staticTables/staticTableContext';
 import Sidebar from './components/layout/sidebar/Sidebar';
 import Pluviometrie from './pages/pluviometrie/Pluviometrie';
+import ScrollToTop from './components/ScrollToTop.';
 function App() {
   return (
     <HorodatedTableProvider>
       <StaticTableProvider>
     <Router>
+    <ScrollToTop/>
 
        <div className='container'>
        <Sidebar/>

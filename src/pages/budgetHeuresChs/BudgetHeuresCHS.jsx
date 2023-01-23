@@ -30,9 +30,9 @@ function BudgetHeuresCHS() {
             {table.staticLines.map((table) => (
             <tr>
 
-              <td className="table-title">{table.champs1}</td>
-              <td className="table-title">{table.champs2}</td>
-              <td className="table-title">{table.champs3}</td>
+              <td className={`table-title ${table.date === ""  && 'warning'} `}>{table.champs1}</td>
+              <td className={`table-title ${table.date === ""  && 'warning'} `}>{table.champs2}</td>
+              <td className={`table-title ${table.date === ""  && 'warning'} `}>{table.champs3}</td>
             </tr>
           ))}
           </table>

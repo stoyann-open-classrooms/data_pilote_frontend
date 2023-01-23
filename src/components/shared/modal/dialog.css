@@ -49,10 +49,12 @@ button {
   position: absolute;
   color: rgb(227, 227, 227);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
+  background-color: #14433e;
   top: 50%;
   left: 50%;
-  max-width: 50rem;
+  max-width: 40rem;
+  font-size: 0.9rem;
   width: 100%;
   transform: translate(-50%, -50%);
 }
@@ -70,18 +72,21 @@ button {
 
 .dialog_form {
   display: flex;
-  padding: 1rem 0.7rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
   min-height: 200px;
-  background-color: #041d1a;
 }
 
 .close_modal {
+  background-color: transparent !important;
   position: absolute;
-  right: 0;
-  background-color: #fff;
+  color: white;
+  right: 1rem;
+  font-size: 1.5rem;
   width: 20px;
+}
+.close_modal:hover {
+  color: red;
 }/*# sourceMappingURL=dialog.css.map */

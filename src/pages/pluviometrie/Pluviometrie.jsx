@@ -17,6 +17,8 @@ function Pluviometrie() {
     console.log(dataTable);
     setLoading(false);
   };
+  
+  
   if (!loading) {
   
 
@@ -27,6 +29,7 @@ function Pluviometrie() {
         <table>
           <tr>
             <th>Date</th>
+            <th>Heure</th>
             <th>mois numeros</th>
             <th>Pluviometrie</th>
           
@@ -35,8 +38,9 @@ function Pluviometrie() {
           {dataTable.map((table) => (
             <tr>
               <td className="table-title"> {new Date(table.createdAt).toLocaleDateString()}</td>
+              <td className={`table-title ${table.date === ""  && 'danger'} `}> {table.date.split("-")[1]}</td>
               <td className="table-title">{table.month}</td>
-              <td className="table-title">{table.pluviometrie}</td>
+              <td className={`table-title ${(table.pluviometrie === "" || table.pluviometrie.includes('hPa') == true ) && 'danger' } `}  >{table.pluviometrie}</td>
             </tr>
           ))}
         </table>

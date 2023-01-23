@@ -1,13 +1,16 @@
 import "./table.css";
 import { BiInfoCircle } from "react-icons/bi";
 import Dialog from "../../components/shared/modal/Dialog";
+import NewStaticTable from "../../components/newTable/NewStaticTable";
+import NewHoradedTable from "../../components/newTable/NewHoradedTable";
 function NewTable() {
   return (
     <div>
       <h1>Créer un nouveaux tableau de donées</h1>
       <div className="btn-container">
         <Dialog btn={"Tableau satique"}>
-          <form>
+          <NewStaticTable/>
+          {/* <form>
             <h4>Créer un tableau statique</h4>
           
             <div className="form_group">
@@ -39,11 +42,12 @@ function NewTable() {
               {" "}
               Créer ce tableau
             </button>
-          </form>
+          </form> */}
         </Dialog>
 
         <Dialog btn={"Tableau horodatés"}>
-          <form>
+          <NewHoradedTable/>
+          {/* <form>
             <h4>Créer un tableau horodatés</h4>
             
             <div className="form_group">
@@ -75,7 +79,7 @@ function NewTable() {
               {" "}
               Créer ce tableau
             </button>
-          </form>
+          </form> */}
         </Dialog>
       </div>
       <div className="text_container">

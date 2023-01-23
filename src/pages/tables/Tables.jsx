@@ -12,13 +12,7 @@ function Tables() {
   useEffect(() => {
     fetchHorodatedTables()    
   },[])
-
-
   
-
-
-  
-
 
 
 if(!loading ){
@@ -32,8 +26,9 @@ if(!loading ){
 
 
         {horodatedTables.map((horodated) => (
-          <h3 className='table-title' key={horodated._id}>{horodated.title}</h3>
+          <h3 className='table-title-item' key={horodated._id}>{horodated.title}</h3>
         ))}
+        <h3 className='table-title-item'>Pluviométrie</h3>
         </div>
         <h2>Tableaux Statiques</h2>
         <div className='table-container'>

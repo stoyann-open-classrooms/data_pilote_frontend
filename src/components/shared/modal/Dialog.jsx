@@ -3,6 +3,7 @@ import "./dialog.css"
 import {FaPlus} from 'react-icons/fa'
 import {AiOutlineClose} from 'react-icons/ai'
 
+
 function Dialog({ btn, children, addIcone, editIcone }) {
   const [modal, setModal] = useState(true)
 

@@ -31,10 +31,10 @@ function Objectifs() {
 
           {dataTable.horodatedLines.map((table) => (
             <tr>
-              <td className="table-title"> {table.date}</td>
-              <td className="table-title">{table.champs1}</td>
-              <td className="table-title">{table.champs2}</td>
-              <td className="table-title">{table.champs3}</td>
+              <td className= {`table-title ${table.date === ""  && 'warning'} `} > {table.date}</td>
+              <td className={`table-title ${table.champs1 === ""  && 'warning'} `}>{table.champs1}</td>
+              <td className={`table-title ${table.champs2 === ""  && 'warning'} `}>{table.champs2}</td>
+              <td className={`table-title ${table.champs3 === ""  && 'warning'} `}>{table.champs3}</td>
             </tr>
           ))}
         </table>
