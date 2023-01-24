@@ -7,7 +7,7 @@ main {
   padding: 0 2% 0 10rem;
  
   margin-bottom: 10rem;
-  color: $dark;
+  color: $text;
   
 }
 
@@ -44,6 +44,7 @@ h2 {
   border-radius: 5px;
   text-align: center;
   padding: 10px;
+  
 }
 
 .table-title-item {
@@ -90,6 +91,7 @@ th,
 td {
   border: 1px solid #14433e;
   padding: 5px;
+  color: $text;
 }
 
 table {
@@ -102,11 +104,9 @@ table {
 th {
   background-color: #63b66a;
   text-transform: uppercase;
-  color: white;
+  color: $text;
 }
-.table-title{
-  padding: 1rem;
-}
+
 
 
 
@@ -148,3 +148,41 @@ th {
   margin: 2rem 0;
   display: flex;
 }
+
+td {
+  .td-btn{
+    width: auto;
+    background-color: rgba(182, 30, 30, 0.526);
+    margin:  1rem;
+    color: black;
+
+  }
+}
+
+
+
+.table-title-item{
+  display: flex;
+  flex-direction: column;
+max-width: 480px;
+}
+
+.table-title-item-details{
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  span{
+    margin: 0 1rem;
+    font-weight: bolder;
+  }
+}
+
+
+.table-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+

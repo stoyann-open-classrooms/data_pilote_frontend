@@ -46,56 +46,42 @@ button {
   cursor: pointer;
 }
 
-.links_container {
+.searchBar-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  margin: 1rem auto;
+  position: relative;
+  width: 100%;
+}
+.searchBar-container input {
+  padding: 0.8rem 0.5rem;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.searchBar-container .searchIcon {
+  position: relative;
+  right: 3rem;
+  top: 2px;
+  font-size: 2rem;
 }
 
-.link-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #127369;
-  border-radius: 15px;
-  background-color: rgb(117, 122, 132);
-  margin: 1rem;
+.filter-container {
+  width: 100%;
+  background-color: #fff;
   padding: 1rem;
-  width: auto;
+  display: flex;
+  margin: 1rem auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  justify-content: space-between;
 }
-.link-content h3 {
-  text-align: center;
-  width: 100%;
-}
-
-.link {
+.filter-container div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.link p {
-  background-color: #127369;
-  width: 100%;
-  color: rgb(223, 223, 223);
-  padding: 10px;
-  font-size: 0.5rem;
-  text-align: center;
-  border-radius: 10px;
-  text-overflow: hiden;
+.filter-container div input {
+  padding: 1rem;
 }
-.link button {
-  right: 5.8rem;
-  bottom: 0;
-  color: white;
-  border: 2px solid white;
-  top: 0;
-  height: 100%;
-  width: auto;
-}
-
-h1 {
-  font-size: 25px;
-  margin-bottom: 30px;
-}/*# sourceMappingURL=links.css.map */
+.filter-container div input:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=searbar.css.map */

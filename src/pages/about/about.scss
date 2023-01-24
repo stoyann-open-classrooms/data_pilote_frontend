@@ -7,27 +7,32 @@
 
 .documentation {
     h1 {
-        background-color: $primary;
+     
         padding: 10px;
-        color:  $white;
+        color:  $text;
         text-transform: uppercase;
         font-weight: bolder;
         letter-spacing: 1.5px;
         border-radius: $radius;
+        font-size: 1.2rem;
     }
     h2{
-        background-color: rgb(66, 152, 108);
-        padding: 10px;
-        color: white;
+      
+       
+        color: $text;
         text-transform: uppercase;
         font-weight: bolder;
         margin-bottom: 25px;
+        text-align: left;
         letter-spacing: 1.5px;
+        font-size: 1rem;
         text-decoration: none;
+        text-decoration: underline;
         border-radius: $radius;
     }
     p{
         line-height: 1.5;
-        margin: 30px 0;
+        margin: 1rem 0;
+        font-size: 0.8rem;
     }
 }

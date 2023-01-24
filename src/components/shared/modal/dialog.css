@@ -16,7 +16,8 @@ body {
   flex-direction: column;
   margin: auto;
   font-family: "Poppins", sans-serif;
-  background-color: #f1fbf6;
+  background-color: #d4d9d8;
+  color: #2b2f2f;
 }
 
 a {
@@ -47,10 +48,10 @@ button {
 
 .modal {
   position: absolute;
-  color: rgb(227, 227, 227);
+  color: #2b2f2f;
   border-radius: 1rem;
   padding: 1rem 0;
-  background-color: #14433e;
+  background-color: #127369;
   top: 50%;
   left: 50%;
   max-width: 40rem;
@@ -65,7 +66,7 @@ button {
   left: 0;
   right: 0;
   height: 100vh;
-  z-index: 99999;
+  z-index: 9999;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.801);
 }
@@ -82,9 +83,10 @@ button {
 .close_modal {
   background-color: transparent !important;
   position: absolute;
-  color: white;
+  color: #2b2f2f;
   right: 1rem;
-  font-size: 1.5rem;
+  top: 0;
+  font-size: 2rem;
   width: 20px;
 }
 .close_modal:hover {

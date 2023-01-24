@@ -18,7 +18,7 @@ function Sidebar() {
             
             <li> <Link to={'/'}> <BsFileBarGraphFill className='ic'/>Rapport</Link></li>
             <li>  <Link to={'/links'}> <CiLink className='ic'/> Liens</Link></li>
-            <li> <Link to={'/tables'}> <AiOutlineTable className='ic'/> Tableaux</Link></li>
+            {/* <li> <Link to={'/tables'}> <AiOutlineTable className='ic'/> Tableaux</Link></li> */}
             <li> <Link to={'/new-table'}>  <AiFillPlusCircle className='ic'/>Ajouter</Link></li>
             <li> <Link to={'/about'}><HiDocumentMagnifyingGlass className='ic'/>Infos</Link></li>
         </ul>

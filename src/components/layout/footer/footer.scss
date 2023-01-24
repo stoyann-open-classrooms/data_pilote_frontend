@@ -1,5 +1,10 @@
+@import "../../../SASS/reset";
+@import "../../../SASS/variables";
+
+
+
 footer {
-  background-color: #14433e;
+  background-color: $primary;
   color: white;
   margin-top: 50px;
   position: absolute;

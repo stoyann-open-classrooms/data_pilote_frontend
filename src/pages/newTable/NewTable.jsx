@@ -3,83 +3,18 @@ import { BiInfoCircle } from "react-icons/bi";
 import Dialog from "../../components/shared/modal/Dialog";
 import NewStaticTable from "../../components/newTable/NewStaticTable";
 import NewHoradedTable from "../../components/newTable/NewHoradedTable";
+import Hero from "../../components/layout/hero/Hero";
 function NewTable() {
   return (
-    <div>
-      <h1>Créer un nouveaux tableau de donées</h1>
+    <>
+      <Hero title={"Créer un nouveaux tableau de données"} />
       <div className="btn-container">
-        <Dialog btn={"Tableau satique"}>
-          <NewStaticTable/>
-          {/* <form>
-            <h4>Créer un tableau statique</h4>
-          
-            <div className="form_group">
-              <label htmlFor="champ1">Titre de la Colonne n° 1</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ2">Titre de la Colonne n° 2</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ3">Titre de la Colonne n° 3</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ4">Titre de la Colonne n° 4</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ5">Titre de la Colonne n° 5</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ6">Titre de la Colonne n° 6</label>
-              <input type="text" />
-            </div>
-
-            <button className="submit_btn" type="submit">
-              {" "}
-              Créer ce tableau
-            </button>
-          </form> */}
+        <Dialog btn={"Tableau statique"}>
+          <NewStaticTable />
         </Dialog>
 
         <Dialog btn={"Tableau horodatés"}>
-          <NewHoradedTable/>
-          {/* <form>
-            <h4>Créer un tableau horodatés</h4>
-            
-            <div className="form_group">
-              <label htmlFor="champ1">Titre de la Colonne n° 1</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ2">Titre de la Colonne n° 2</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ3">Titre de la Colonne n° 3</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ4">Titre de la Colonne n° 4</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ5">Titre de la Colonne n° 5</label>
-              <input type="text" />
-            </div>
-            <div className="form_group">
-              <label htmlFor="champ6">Titre de la Colonne n° 6</label>
-              <input type="text" />
-            </div>
-
-            <button className="submit_btn" type="submit">
-              {" "}
-              Créer ce tableau
-            </button>
-          </form> */}
+          <NewHoradedTable />
         </Dialog>
       </div>
       <div className="text_container">
@@ -107,7 +42,7 @@ function NewTable() {
         </p>
         <p>Tous les tableaux sont limités a 6 champs (colonnes)</p>
       </div>
-    </div>
+    </>
   );
 }
 

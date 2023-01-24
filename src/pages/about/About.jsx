@@ -10,13 +10,13 @@ function About() {
       <h1>Documentation</h1>
 
       <p>
-        Bienvenue sur Data Pilote by Square, l'application idéale pour saisir,
+        Bienvenue sur <strong>Data Pilote by Square</strong>, l'application idéale pour saisir,
         gérer et intégrer vos données dans des tableaux et piloter votre
         entreprise.
       </p>
       <h2>Introduction</h2>
       <p>
-        Data Pilote by Square est une application qui permet à des utilisateurs
+      <strong>Data Pilote by Square</strong> est une application qui permet à des utilisateurs
         de saisir des données dans deux types de tableaux différents: les
         tableaux horodatés et les tableaux statiques. Les tableaux horodatés
         contiennent une date obligatoire et peuvent contenir autant de lignes
@@ -61,7 +61,7 @@ function About() {
         XPF.
       </p>
       <h2>Support</h2>
-      <p>Si vous rencontrez des problèmes lors de l'utilisation de l'application Data Pilote by Square, veuillez contacter notre équipe de support à l'adresse : <a href="jepilotemaboite@square.nc">jepilotemaboite@square.nc</a>  pour obtenir de l'aide.</p>
+      <p>Si vous rencontrez des problèmes lors de l'utilisation de l'application <strong>Data Pilote by Square</strong>, veuillez contacter notre équipe de support à l'adresse : <a href="jepilotemaboite@square.nc">jepilotemaboite@square.nc</a>  pour obtenir de l'aide.</p>
     </div>
     </div>
   );

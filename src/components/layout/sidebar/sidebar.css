@@ -16,7 +16,8 @@ body {
   flex-direction: column;
   margin: auto;
   font-family: "Poppins", sans-serif;
-  background-color: #f1fbf6;
+  background-color: #d4d9d8;
+  color: #2b2f2f;
 }
 
 a {
@@ -46,7 +47,7 @@ button {
 }
 
 .sidenav {
-  background-color: #14433e;
+  background-color: #127369;
   color: white;
   width: 30%;
   position: fixed;
@@ -83,7 +84,7 @@ button {
 }
 
 li:hover {
-  color: #63b66a;
+  color: #291759;
 }
 
 .logo {

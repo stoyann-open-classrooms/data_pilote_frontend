@@ -1,32 +1,64 @@
-import { createContext , useState } from "react";
+import { createContext, useReducer } from "react";
+import staticTableReducer from "./staticTableReducer";
+
+const StaticTableContext = createContext();
+
+const staticTableUrl =
+  "http://localhost:5550/data-pilote/api/v1/static_tables/";
+
+export const StaticTableProvider = ({ children }) => {
+  const initialState = {
+    staticTables: [],
+
+    loading: false,
+  };
+
+  const [state, dispath] = useReducer(staticTableReducer, initialState);
 
 
-const StaticTableContext = createContext()
+  // GET ALL HORODATED TABLES
+  const fetchStaticTables = async () => {
+    setLoading();
 
-const staticTableUrl = "http://localhost:5550/data-pilote/api/v1/static_tables/"
+    const response = await fetch(staticTableUrl);
+    const data = await response.json();
+
+    dispath({
+      type: "GET_STATIC_TABLES",
+      payload: data.data,
+    });
+  };
+  
+
+// GET  HORODATED TABLE BY ID
+const fetchStaticTable = async (id) => {
+  setLoading();
+
+  const response = await fetch(staticTableUrl);
+  const data = await response.json();
+
+  dispath({
+    type: "GET_STATIC_TABLE",
+    payload: data,
+  });
+};
 
 
+  //Set loading
+  const setLoading = () => dispath({ type: "SET_LOADING" });
 
+  return (
+    <StaticTableContext.Provider
+      value={{
+        staticTables: state.staticTables,
+        loading: state.loading,
+        fetchStaticTables,
+       
+      }}
+    >
+      {children}
+    </StaticTableContext.Provider>
+  );
+};
 
-export const StaticTableProvider = ({children}) => {
-    const [staticTables, setStaticTables] = useState({})
-    const [loading, setLoading] = useState(true)
-
-    const fetchStaticTables = async () => {
-        const response = await fetch(staticTableUrl)
-        const tables = await response.json()
-        
-        setStaticTables(tables)
-      
-        setLoading(false)
-        
-      }
-
-
-      return <StaticTableContext.Provider value={{staticTables, loading, fetchStaticTables}}>
-
-        {children}
-      </StaticTableContext.Provider>
-}
-
-export default  StaticTableContext
+export default StaticTableContext;

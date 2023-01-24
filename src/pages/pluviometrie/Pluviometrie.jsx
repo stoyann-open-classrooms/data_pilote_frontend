@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Hero from "../../components/layout/hero/Hero";
 
 function Pluviometrie() {
   const [loading, setLoading] = useState(true);
@@ -17,34 +18,44 @@ function Pluviometrie() {
     console.log(dataTable);
     setLoading(false);
   };
-  
-  
+
   if (!loading) {
-  
-
-
     return (
-      <div>
-        <h1>Tableau Pluviometrie</h1>
+      <>
+        <Hero title={"Tableau Pluviométrie"} />
+
         <table>
           <tr>
             <th>Date</th>
             <th>Heure</th>
             <th>mois numeros</th>
             <th>Pluviometrie</th>
-          
           </tr>
 
           {dataTable.map((table) => (
             <tr>
-              <td className="table-title"> {new Date(table.createdAt).toLocaleDateString()}</td>
-              <td className={`table-title ${table.date === ""  && 'danger'} `}> {table.date.split("-")[1]}</td>
+              <td className="table-title">
+                {" "}
+                {new Date(table.createdAt).toLocaleDateString()}
+              </td>
+              <td className={`table-title ${table.date === "" && "danger"} `}>
+                {" "}
+                {table.date.split("-")[1]}
+              </td>
               <td className="table-title">{table.month}</td>
-              <td className={`table-title ${(table.pluviometrie === "" || table.pluviometrie.includes('hPa') == true ) && 'danger' } `}  >{table.pluviometrie}</td>
+              <td
+                className={`table-title ${
+                  (table.pluviometrie === "" ||
+                    table.pluviometrie.includes("hPa") == true) &&
+                  "danger"
+                } `}
+              >
+                {table.pluviometrie}
+              </td>
             </tr>
           ))}
         </table>
-      </div>
+      </>
     );
   } else {
     return <h1>LOADING...</h1>;
