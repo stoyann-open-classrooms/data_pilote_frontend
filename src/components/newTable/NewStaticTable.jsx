@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Button from "../shared/button/Button";
+import { useNavigate } from "react-router-dom";
 
 function NewStaticTable() {
+  const navigate = useNavigate()
   const [staticTable, setStaticTable] = useState({
     title: "",
+    description: "",
     champ1: "",
     champ2: "",
     champ3: "",
@@ -12,13 +16,24 @@ function NewStaticTable() {
     champ5: "",
     champ6: "",
   });
+  const [btnDisabled, setBtnDisabled] = useState(true)
+  const [message, setMessage] = useState('')
 
   const handleForm = (e) => {
     e.preventDefault();
     if (!staticTable.title) {
       toast.error("Votre tableau doit obligatoirement avoir un titre");
     }
-    createNewStaticTable(staticTable);
+    if(!staticTable.champ1) {
+      toast.error("Votre tableau doit être composée de 2 colonne minimum");
+    }
+    if(!staticTable.champ2) {
+      toast.error("Votre tableau doit être composée de 2 colonne minimum");
+    } else {
+
+      createNewStaticTable(staticTable);
+      navigate(`/19031985/links`)
+    }
   };
 
   const handleInput = ({ currentTarget }) => {
@@ -59,6 +74,13 @@ function NewStaticTable() {
           placeholder="Titre du tableau"
           name="title"
           value={staticTable.title}
+          onChange={handleInput}
+        />
+        <textarea
+          type="text"
+          placeholder="description"
+          name="description"
+          value={staticTable.description}
           onChange={handleInput}
         />
         <input
@@ -103,10 +125,7 @@ function NewStaticTable() {
           value={staticTable.champ6}
           onChange={handleInput}
         />
-        <button className="btn-submit" type="submit">
-          {" "}
-          Créer le tableau
-        </button>
+          <Button type='submit' version= 'secondary'>Créer le tableau</Button>
       </form>
     </>
   );

@@ -1,34 +1,43 @@
+import axios from "axios";
 import { useContext, useEffect } from "react";
-import StaticTableContext from "../../context/table/staticTables/staticTableContext";
+import { toast } from "react-toastify";
+import StaticTableContext from "../../context/StaticTableContext";
 import Spinner from "../shared/spinner/Spinner";
 
-function StaticTablesList() {
-  const { loading, staticTables, fetchStaticTables } =
-    useContext(StaticTableContext);
+import LinkItem from "./LinkItem";
 
+function StaticTablesList() {
+
+
+  const {
+    staticTable,
+    staticTableEdit,
+    fetchStaticTable,
+    isLoading,
+    deleteStaticTable,
+    editStaticTable,
+    updateStaticTable,
+
+  } = useContext(StaticTableContext);
   useEffect(() => {
-    fetchStaticTables();
+    fetchStaticTable();
+   
   }, []);
-  if (!loading) {
+
+
+
+  if (!isLoading) {
     return (
       <>
-        {staticTables.map((item) => (
-         
-      
-
-            <div className="link-content">
-            <p> créer le:   <span>{new Date(item.createdAt).toLocaleDateString()}</span>  </p>
-            <p> Modifié le:   <span>{new Date(item.updatedAt).toLocaleDateString()}</span>  </p>
-              <h3>{item.title}</h3>
-              <button>Copier le lien</button>
-
-              <div className="link">
-                <p>
-                  {item.link}
-                </p>
-              </div>
-            </div>
-          
+        {staticTable.data.map((item) => (
+          <LinkItem
+            item={item}
+            key={item.id}
+            horodated={false}
+            deleteStaticTable={ deleteStaticTable}
+           
+            updateStaticTable={updateStaticTable}
+          />
         ))}
       </>
     );

@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import Button from "../shared/button/Button";
 
 function NewHoradedTable() {
+  const navigate = useNavigate()
   const [horodatedTable, setHorodatedTable] = useState({
     title: "",
+    description: "",
     champ1: "",
     champ2: "",
     champ3: "",
     champ4: "",
     champ5: "",
     champ6: "",
- 
-  
   });
 
   const handleForm = (e) => {
@@ -39,6 +41,8 @@ function NewHoradedTable() {
         toast.success(
           `Le tableau Horodaté : ${data.title} à étè créer avec succées`
         );
+        navigate(`/19031985/links`)
+
         
       })
       .catch((err) => {
@@ -55,6 +59,7 @@ function NewHoradedTable() {
       <h3>Créer un nouveaux tableau horodaté</h3>
 
       <form onSubmit={handleForm} className="form-modal" action="">
+   
         <input
           type="text"
           placeholder="Titre du tableau"
@@ -62,6 +67,14 @@ function NewHoradedTable() {
           value={horodatedTable.title}
           onChange={handleInput}
         />
+        <textarea
+          placeholder="Decription du tableau"
+          name="description"
+          value={horodatedTable.description}
+          onChange={handleInput}
+        >
+
+        </textarea>
         <input
           type="text"
           placeholder="Titre de la colonne 1"
@@ -108,10 +121,9 @@ function NewHoradedTable() {
           name="champ6"
           value={horodatedTable.champ6}
         />
-        <button className="btn-submit" type="submit">
-          {" "}
-          Créer le tableau
-        </button>
+    
+         
+        <Button type='submit' version= 'secondary'>Créer le tableau</Button>
       </form>
     </>
   );

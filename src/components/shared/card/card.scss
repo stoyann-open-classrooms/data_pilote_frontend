@@ -1,0 +1,85 @@
+@import "../../../SASS/reset";
+@import "../../../SASS/variables";
+@import "../../../SASS/mixins";
+
+.link-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid $primary;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: $shadow;
+  margin: 1rem;
+  position: relative;
+  padding: 1rem;
+  background-color: $secondary;
+  width: auto;
+  .copy-link-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    border-radius: 10px 0 0 10px;
+    background-color: $text;
+    color: #fff;
+    &:hover {
+      background-color: $primary;
+    }
+    .copy-icone {
+        font-size: 30px;
+    }
+  }
+  h3 {
+    text-align: center;
+    width: 80%;
+  }
+  .details {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 1rem;
+
+    p {
+      margin: 0 2rem;
+    }
+  }
+}
+.link {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  p {
+    background-color: $primary;
+    width: 100%;
+    color: rgb(223, 223, 223);
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+
+    border-radius: 10px;
+    text-overflow: hiden;
+  }
+}
+
+
+.btn-container-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    button{
+        width: 80%;
+        margin:  1rem;
+    }
+
+}

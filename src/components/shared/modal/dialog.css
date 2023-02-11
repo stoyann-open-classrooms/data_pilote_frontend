@@ -51,13 +51,15 @@ button {
   color: #2b2f2f;
   border-radius: 1rem;
   padding: 1rem 0;
-  background-color: #127369;
+  background-color: #2d3231;
   top: 50%;
   left: 50%;
   max-width: 40rem;
   font-size: 0.9rem;
+  border: solid 3px #878ec3;
   width: 100%;
   transform: translate(-50%, -50%);
+  color: white;
 }
 
 .overlay {
@@ -83,9 +85,9 @@ button {
 .close_modal {
   background-color: transparent !important;
   position: absolute;
-  color: #2b2f2f;
-  right: 1rem;
-  top: 0;
+  color: white;
+  right: 2rem;
+  top: 1rem;
   font-size: 2rem;
   width: 20px;
 }

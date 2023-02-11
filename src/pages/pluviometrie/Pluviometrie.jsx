@@ -21,14 +21,13 @@ function Pluviometrie() {
 
   if (!loading) {
     return (
-      <>
+      <div className="table-page-container">
         <Hero title={"Tableau Pluviométrie"} />
 
         <table>
           <tr>
             <th>Date</th>
             <th>Heure</th>
-            <th>mois numeros</th>
             <th>Pluviometrie</th>
           </tr>
 
@@ -38,11 +37,12 @@ function Pluviometrie() {
                 {" "}
                 {new Date(table.createdAt).toLocaleDateString()}
               </td>
-              <td className={`table-title ${table.date === "" && "danger"} `}>
+             
+              <td className={`table-title ${table.heure === "" && "danger"} `}>
                 {" "}
-                {table.date.split("-")[1]}
+                {table.heure}
               </td>
-              <td className="table-title">{table.month}</td>
+              
               <td
                 className={`table-title ${
                   (table.pluviometrie === "" ||
@@ -55,7 +55,7 @@ function Pluviometrie() {
             </tr>
           ))}
         </table>
-      </>
+      </div>
     );
   } else {
     return <h1>LOADING...</h1>;

@@ -7,7 +7,7 @@ function NotFound() {
         <div className="error_content">
         <p><BiError/></p> 
         <h1>Erreur 404</h1>
-        <h2>La page que vous demander n'existe pas</h2>
+        <h2>La page que vous demandez n'existe pas</h2>
         <Link className='button' to={'/'}>
       Retour a l'accueil
         </Link>

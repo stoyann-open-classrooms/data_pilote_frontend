@@ -1,0 +1,34 @@
+@import "../../../SASS/reset";
+@import "../../../SASS/variables";
+@import "../../../SASS/mixins";
+
+.btn {
+    width: 100%;
+    height: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: $radius;
+    padding: 0 0.6rem;
+    margin: 1rem 0;
+    &:hover {
+        transform: scale(0.98);
+        opacity: 0.9;
+      }
+     
+  }
+  .btn-primary {
+    background-color: $primary;
+  }
+  .btn-secondary {
+    background-color: $secondary;
+  }
+
+  
+  .delete-btn{
+    background-color: rgb(151, 39, 39);
+   
+  }
+  .update-btn{
+    background-color: rgb(151, 145, 39);
+    
+  }

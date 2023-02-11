@@ -12,15 +12,15 @@ import {HiDocumentMagnifyingGlass} from 'react-icons/hi2'
 function Sidebar() {
   return (
     <nav className='sidenav'>
-       <Link to={'/'}><img className='logo' src={logo} alt="" /></Link> 
+       <Link to={'/19031985'}><img className='logo' src={logo} alt="" /></Link> 
            {/* <img src={logo} alt="Logo je pilote ma boite" /> */}
            <ul>
             
-            <li> <Link to={'/'}> <BsFileBarGraphFill className='ic'/>Rapport</Link></li>
-            <li>  <Link to={'/links'}> <CiLink className='ic'/> Liens</Link></li>
+            <li> <Link to={'/19031985'}> <BsFileBarGraphFill className='ic'/>Rapport</Link></li>
+            <li>  <Link to={'/19031985/links'}> <CiLink className='ic'/> Liens</Link></li>
             {/* <li> <Link to={'/tables'}> <AiOutlineTable className='ic'/> Tableaux</Link></li> */}
-            <li> <Link to={'/new-table'}>  <AiFillPlusCircle className='ic'/>Ajouter</Link></li>
-            <li> <Link to={'/about'}><HiDocumentMagnifyingGlass className='ic'/>Infos</Link></li>
+            <li> <Link to={'/19031985/new-table'}>  <AiFillPlusCircle className='ic'/>Ajouter</Link></li>
+            <li> <Link to={'/19031985/about'}><HiDocumentMagnifyingGlass className='ic'/>Infos</Link></li>
         </ul>
             
     </nav>

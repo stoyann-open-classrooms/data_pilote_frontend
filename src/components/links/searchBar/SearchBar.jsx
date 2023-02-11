@@ -1,29 +1,31 @@
+import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./searbar.css";
 
 function SearchBar() {
+
+  const [filter, setFilter] = useState('')
+
+const handleChange = (e) => {
+setFilter(e.target.value);
+
+}
+
+
   return (
     <>
-      <div className="filter-container">
-        <legend>Filtrer par types de tableaux</legend>
+      <form className="filter-container">
+        <h2>Filtrer par types de tableaux</h2>
 
-        <div>
-          <input type="checkbox" id="horodated" name="horodated" />
-          <label for="horodated">Horodatés</label>
-        </div>
+  
 
-        <div>
-          <input type="checkbox" id="static" name="static" />
-          <label for="static">Statique</label>
+        <div className="form-group">
+          Tous <input onChange={handleChange} value='all'  type="checkbox" id="all" name="all" />
+          Horodatés <input onChange={handleChange} value='horodated' type="checkbox" id="horodated" name="horodated" />
+          Statique <input  onChange={handleChange} value='static' type="checkbox" id="static" name="static" />
         </div>
-      </div>
-      <div className="searchBar-container">
-        <input type="text" placeholder="Rechercher un tableau" />
-        <div className="searchIcon">
-
-        <FaSearch/>
-        </div>
-      </div>
+      </form>
+  
     </>
   );
 }

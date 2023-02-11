@@ -1,43 +1,35 @@
+import axios from "axios";
 import { useContext, useEffect } from "react";
-import HorodatedTableContext from "../../context/table/horodatedTables/horodatedTableContext";
+import { toast } from "react-toastify";
+import HorodatedTableContext from "../../context/HorodatedTableContext";
 import Spinner from "../shared/spinner/Spinner";
 
+import LinkItem from "./LinkItem";
 function HorodatedTablesList() {
-  const { loading, horodatedTables, fetchHorodatedTables } = useContext(
-    HorodatedTableContext
-  );
+  const {
+    horodatedTable,
+
+    fetchHorodatedTable,
+    isLoading,
+    deleteHorodatedTable,
+
+    updateHorodatedTable,
+  } = useContext(HorodatedTableContext);
 
   useEffect(() => {
-    fetchHorodatedTables();
+    fetchHorodatedTable();
   }, []);
-  if (!loading) {
+  if (!isLoading) {
     return (
       <>
-        {horodatedTables.map((item) => (
-    
-            <div className="link-content">
-              <p>
-                {" "}
-                créer le:{" "}
-                <span>
-                  {new Date(item.createdAt).toLocaleDateString()}
-                </span>{" "}
-              </p>
-              <p>
-                {" "}
-                Modifié le:{" "}
-                <span>
-                  {new Date(item.updatedAt).toLocaleDateString()}
-                </span>{" "}
-              </p>
-              <h3>{item.title}</h3>
-              <button>Copier le lien</button>
-
-              <div className="link">
-                <p>{item.link}</p>
-              </div>
-            </div>
-        
+        {horodatedTable.data.map((item) => (
+          <LinkItem
+            horodated={true}
+            item={item}
+            key={item.id}
+            deleteHorodatedTable={() => deleteHorodatedTable(item.id)}
+            updateHorodatedTable={updateHorodatedTable}
+          />
         ))}
       </>
     );

@@ -47,7 +47,7 @@ button {
 }
 
 .sidenav {
-  background-color: #127369;
+  background-color: #2d3231;
   color: white;
   width: 30%;
   position: fixed;
@@ -84,7 +84,7 @@ button {
 }
 
 li:hover {
-  color: #291759;
+  color: #878ec3;
 }
 
 .logo {
