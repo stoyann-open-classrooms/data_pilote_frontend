@@ -18,7 +18,7 @@ export const HorodatedTableProvider = ({ children }) => {
   // Fetch horodated tables
   const fetchHorodatedTable = async () => {
     const response = await fetch(
-      `http://localhost:5550/data-pilote/api/v1/horodated_tables`
+      process.env.REACT_APP_BASE_URL + `/horodated_tables`
     );
     const data = await response.json();
 
@@ -29,7 +29,7 @@ export const HorodatedTableProvider = ({ children }) => {
   // Add horodated table
   const addHorodatedTable = async (newHorodatedTable) => {
     const response = await fetch(
-      "http://localhost:5550/data-pilote/api/v1/horodated_tables",
+      process.env.REACT_APP_BASE_URL + `/horodated_tables`,
       {
         method: "POST",
         headers: {
@@ -48,7 +48,7 @@ export const HorodatedTableProvider = ({ children }) => {
   const deleteHorodatedTable = async (id) => {
     if (window.confirm("Are you sure you want to delete?")) {
       await fetch(
-        `http://localhost:5550/data-pilote/api/v1/horodated_tables/${id}`,
+        process.env.REACT_APP_BASE_URL + `/horodated_tables/${id}`,
         { method: "DELETE" }
       );
       
@@ -61,7 +61,7 @@ export const HorodatedTableProvider = ({ children }) => {
   // Update feedback item
   const updateHorodatedTable = async (id, updItem) => {
     const response = await fetch(
-      `http://localhost:5550/data-pilote/api/v1/horodated_tables/${id}`,
+      process.env.REACT_APP_BASE_URL + `/horodated_tables/${id}`,
       {
         method: "PUT",
         headers: {

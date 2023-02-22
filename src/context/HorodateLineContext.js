@@ -18,7 +18,7 @@ export const HorodatedLineProvider = ({ children }) => {
   // Fetch horodated tables
   const fetchHorodatedLine = async () => {
     const response = await fetch(
-      `http://localhost:5550/data-pilote/api/v1/horodated_lines`
+      process.env.REACT_APP_BASE_URL + `/horodated_lines`
     );
     const data = await response.json();
 
@@ -29,7 +29,7 @@ export const HorodatedLineProvider = ({ children }) => {
   // Add horodated table
   const addHorodatedLine = async (newHorodatedLine) => {
     const response = await fetch(
-      "http://localhost:5550/data-pilote/api/v1/horodated_lines",
+      process.env.REACT_APP_BASE_URL + "/horodated_lines",
       {
         method: "POST",
         headers: {
@@ -48,7 +48,7 @@ export const HorodatedLineProvider = ({ children }) => {
   const deleteHorodatedLine = async (id) => {
     if (window.confirm("Are you sure you want to delete?")) {
       await fetch(
-        `http://localhost:5550/data-pilote/api/v1/horodated_lines/${id}`,
+        process.env.REACT_APP_BASE_URL + `/horodated_lines/${id}`,
         { method: "DELETE" }
       );
       
@@ -61,7 +61,7 @@ export const HorodatedLineProvider = ({ children }) => {
   // Update feedback item
   const updateHorodatedLine = async (id, updItem) => {
     const response = await fetch(
-      `http://localhost:5550/data-pilote/api/v1/horodated_lines/${id}`,
+      process.env.REACT_APP_BASE_URL + `/horodated_lines/${id}`,
       {
         method: "PUT",
         headers: {

@@ -18,7 +18,7 @@ export const StaticLineProvider = ({ children }) => {
   // Fetch horodated tables
   const fetchStaticLine = async () => {
     const response = await fetch(
-      `http://localhost:5550/data-pilote/api/v1/static_lines`
+      process.env.REACT_APP_BASE_URL + `/static_lines`
     );
     const data = await response.json();
 
@@ -29,7 +29,7 @@ export const StaticLineProvider = ({ children }) => {
   // Add horodated table
   const addStaticLine = async (newStaticLine) => {
     const response = await fetch(
-      "http://localhost:5550/data-pilote/api/v1/static_lines",
+      process.env.REACT_APP_BASE_URL +  "/static_lines",
       {
         method: "POST",
         headers: {
@@ -48,7 +48,7 @@ export const StaticLineProvider = ({ children }) => {
   const deleteStaticLine = async (id) => {
     if (window.confirm("Are you sure you want to delete?")) {
       await fetch(
-        `http://localhost:5550/data-pilote/api/v1/static_lines/${id}`,
+        process.env.REACT_APP_BASE_URL +  `/static_lines/${id}`,
         { method: "DELETE" }
       );
       
@@ -61,7 +61,7 @@ export const StaticLineProvider = ({ children }) => {
   // Update feedback item
   const updateStaticLine = async (id, updItem) => {
     const response = await fetch(
-      `http://localhost:5550/data-pilote/api/v1/static_lines/${id}`,
+      process.env.REACT_APP_BASE_URL + `/static_lines/${id}`,
       {
         method: "PUT",
         headers: {

@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from '../../components/layout/sidebar/Sidebar'
 
 function Home() {
+
   return (
     <>
       <Sidebar/>

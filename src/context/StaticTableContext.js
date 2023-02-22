@@ -16,7 +16,7 @@ export const StaticTableProvider = ({ children }) => {
 
   // Fetch static tables
   const fetchStaticTable = async () => {
-    const response = await fetch(`http://localhost:5550/data-pilote/api/v1/static_tables`)
+    const response = await fetch( process.env.REACT_APP_BASE_URL + `/static_tables`)
     const data = await response.json()
 
     setStaticTable(data)
@@ -25,7 +25,7 @@ export const StaticTableProvider = ({ children }) => {
 
   // Add static table
   const addStaticTable = async (newStaticTable) => {
-    const response = await fetch('http://localhost:5550/data-pilote/api/v1/static_tables', {
+    const response = await fetch( process.env.REACT_APP_BASE_URL + '/static_tables', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const StaticTableProvider = ({ children }) => {
   // Delete staticTable
   const deleteStaticTable = async (id) => {
     if (window.confirm('Are you sure you want to delete?')) {
-      await fetch(`http://localhost:5550/data-pilote/api/v1/static_tables/${id}`, { method: 'DELETE' })
+      await fetch( process.env.REACT_APP_BASE_URL + `/static_tables/${id}`, { method: 'DELETE' })
 
       window.location.reload();
       setStaticTable(staticTable.filter((item) => item.id !== id))
@@ -50,7 +50,7 @@ export const StaticTableProvider = ({ children }) => {
 
   // Update feedback item
   const updateStaticTable = async (id, updItem) => {
-    const response = await fetch(`http://localhost:5550/data-pilote/api/v1/static_tables/${id}`, {
+    const response = await fetch( process.env.REACT_APP_BASE_URL + `/static_tables/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -63,8 +63,8 @@ export const StaticTableProvider = ({ children }) => {
     // NOTE: no need to spread data and item
     setStaticTable(staticTable.map((item) => (item.id === id ? data : item)))
 
-    // FIX: this fixes being able to add a feedback after editing
-    // credit to Jose https://www.udemy.com/course/react-front-to-back-2022/learn/lecture/29768200#questions/16462688
+    
+   
     setStaticTable({
       item: {},
       edit: false,
