@@ -38,14 +38,6 @@ export default function LinkItem({
     });
   };
 
-
-
-
-
-
-  
-
-
   return (
     <Card horodated={horodated}>
       <h3>{item.title}</h3>
@@ -67,13 +59,19 @@ export default function LinkItem({
       <div className="btn-container-link">
         {item.tableType === "Horodaté" ? (
           <>
-            <button className=" btn delete-btn" onClick={() => deleteHorodatedTable(item.id)}>
+            <button
+              className=" btn delete-btn"
+              onClick={() => deleteHorodatedTable(item.id)}
+            >
               Supprimer
             </button>
             <Dialog btn={"Modifier"}>
               <h2>Modifier le tableau</h2>
-              
-              <form onSubmit={() => updateHorodatedTable(item.id , updatedTable)} className="form-modal">
+
+              <form
+                onSubmit={() => updateHorodatedTable(item.id, updatedTable)}
+                className="form-modal"
+              >
                 <input
                   type="text"
                   name="title"
@@ -151,14 +149,17 @@ export default function LinkItem({
           </>
         ) : (
           <>
-            <button className=" btn delete-btn" onClick={() => deleteStaticTable(item.id)}>
+            <button
+              className=" btn delete-btn"
+              onClick={() => deleteStaticTable(item.id)}
+            >
               Supprimer
             </button>
             <Dialog btn={"Modifier"}>
               <form
                 action=""
                 className="form-modal"
-                onSubmit={() =>  updateStaticTable(item.id , updatedTable)}
+                onSubmit={() => updateStaticTable(item.id, updatedTable)}
               >
                 <input
                   type="text"
@@ -231,18 +232,17 @@ export default function LinkItem({
                     item.champ6 ? item.champ6 : "titre de la colonne"
                   }
                 />
-                
-                
-                <button  className="btn btn-secondary">Modifier</button>
+
+                <button className="btn btn-secondary">Modifier</button>
               </form>
             </Dialog>
           </>
         )}
       </div>
 
-      <CopyToClipboard text={item.link}>
+      <CopyToClipboard text={`/item.link`}>
         <button className="copy-link-btn" onClick={onCopy}>
-          {" "}
+          
           <BiLink className="copy-icone" /> Copier le lien
         </button>
       </CopyToClipboard>
