@@ -27,7 +27,7 @@ function StaticTable() {
 
   const fetchStaticTable = async () => {
     const response = await fetch(
-      `http://localhost:5550/data-pilote/api/v1/static_tables/${params.id}`
+      process.env.REACT_APP_BASE_URL + `/static_tables/${params.id}`
     );
     const data = await response.json();
     setTable(data.data);

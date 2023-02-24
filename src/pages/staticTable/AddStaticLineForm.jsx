@@ -34,7 +34,7 @@ function AddStaticLineForm({table, tableId}) {
       const createEntry = async (data) => {
         const response = await axios
 
-          .post("http://localhost:5550/data-pilote/api/v1/static_lines", data)
+          .post(process.env.REACT_APP_BASE_URL + "/static_lines", data)
           .then((res) => {
             // Work with the response...
             toast.success(`La nouvelle entrée  à étè créer avec succées`);

@@ -45,7 +45,7 @@ function NewStaticTable() {
   };
   const createNewStaticTable = async (data) => {
     const response = await axios
-      .post("http://localhost:5550/data-pilote/api/v1/static_tables", data)
+      .post(process.env.REACT_APP_BASE_URL + "/static_tables", data)
       .then((res) => {
         // Work with the response...
         toast.success(

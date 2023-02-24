@@ -11,7 +11,7 @@ function Pluviometrie() {
 
   const fetchPluviometrieTables = async () => {
     const response = await fetch(
-      "http://localhost:5550/data-pilote/api/v1/weathers"
+      process.env.REACT_APP_BASE_URL + "/weathers"
     );
     const data = await response.json();
     setDataTable(data.data);

@@ -35,7 +35,7 @@ function NewHoradedTable() {
   };
   const createNewHorodatedTable = async (data) => {
     const response = await axios
-      .post("http://localhost:5550/data-pilote/api/v1/horodated_tables", data)
+      .post( process.env.REACT_APP_BASE_URL + "/horodated_tables", data)
       .then((res) => {
         // Work with the response...
         toast.success(
