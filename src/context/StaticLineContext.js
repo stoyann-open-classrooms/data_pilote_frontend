@@ -18,7 +18,7 @@ export const StaticLineProvider = ({ children }) => {
   // Fetch horodated tables
   const fetchStaticLine = async () => { REACT_APP_BASE_URL + `/static_lines`
     const response = await fetch(
-      process.env.R + `/static_lines`
+      process.env.REACT_APP_BASE_URL + `/static_lines`
     );
     const data = await response.json();
 
