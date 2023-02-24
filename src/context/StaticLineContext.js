@@ -13,10 +13,10 @@ export const StaticLineProvider = ({ children }) => {
 
   useEffect(() => {
     fetchStaticLine();
-  }, []);
+  }, []); 
 
   // Fetch horodated tables
-  const fetchStaticLine = async () => {REACT_APP_BASE_URL
+  const fetchStaticLine = async () => { REACT_APP_BASE_URL + `/static_lines`
     const response = await fetch(
       process.env.R + `/static_lines`
     );
