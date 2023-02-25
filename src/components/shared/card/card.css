@@ -51,14 +51,14 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid #2d3231;
+  border: 3px solid #0c3631;
   border-radius: 15px;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 1rem;
   position: relative;
   padding: 1rem;
-  background-color: #878ec3;
+  background-color: rgb(107, 107, 107);
   width: auto;
 }
 .link-content .copy-link-btn {
@@ -76,7 +76,7 @@ button {
   color: #fff;
 }
 .link-content .copy-link-btn:hover {
-  background-color: #2d3231;
+  background-color: #0c3631;
 }
 .link-content .copy-link-btn .copy-icone {
   font-size: 30px;
@@ -101,7 +101,7 @@ button {
   align-items: center;
 }
 .link p {
-  background-color: #2d3231;
+  background-color: #0c3631;
   width: 100%;
   color: rgb(223, 223, 223);
   padding: 10px;

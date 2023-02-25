@@ -9,12 +9,6 @@ import StaticTableTab from "./StaticTableTab";
 
 function StaticTable() {
 
-
-
-
-
-  
-
   const params = useParams();
   const [table, setTable] = useState({});
 

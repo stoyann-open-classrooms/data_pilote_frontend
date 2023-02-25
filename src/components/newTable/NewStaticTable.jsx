@@ -69,63 +69,87 @@ function NewStaticTable() {
     <>
       <h3>Créer un nouveaux tableau statique</h3>
       <form onSubmit={handleForm} className="form-modal">
+       
         <input
+        className="form-control"
           type="text"
           placeholder="Titre du tableau"
           name="title"
           value={staticTable.title}
           onChange={handleInput}
         />
+     
+
         <textarea
           type="text"
+          className="form-control"
           placeholder="description"
           name="description"
           value={staticTable.description}
           onChange={handleInput}
-        />
+          />
+         
+
         <input
           type="text"
           placeholder="Titre de la colonne 1"
           name="champ1"
           value={staticTable.champ1}
           onChange={handleInput}
-        />
+          />
+         
+
         <input
           type="text"
           placeholder="Titre de la colonne 2"
           name="champ2"
           value={staticTable.champ2}
           onChange={handleInput}
-        />
+          />
+        
+
         <input
           type="text"
           placeholder="Titre de la colonne 3"
           name="champ3"
           value={staticTable.champ3}
           onChange={handleInput}
-        />
+          />
+        
+        
+
         <input
           type="text"
           placeholder="Titre de la colonne 4"
           name="champ4"
           value={staticTable.champ4}
           onChange={handleInput}
-        />
+          />
+      
+         
+
         <input
           type="text"
           placeholder="Titre de la colonne 5"
           name="champ5"
           value={staticTable.champ5}
           onChange={handleInput}
-        />
+          />
+      
+       
         <input
           type="text"
+          
           placeholder="Titre de la colonne 6"
           name="champ6"
           value={staticTable.champ6}
           onChange={handleInput}
-        />
+          />
+        
+        
+
           <Button type='submit' version= 'secondary'>Créer le tableau</Button>
+         
       </form>
     </>
   );

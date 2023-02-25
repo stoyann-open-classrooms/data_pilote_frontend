@@ -21,7 +21,7 @@ function App() {
         <Router>
           <ScrollToTop />
 
-          <div className="container">
+          <main className="container">
             {/* <Sidebar /> */}
 
             <Routes>
@@ -42,7 +42,7 @@ function App() {
             <Routes></Routes>
 
             <Footer />
-          </div>
+          </main>
         </Router>
         <ToastContainer />
    

@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom";
 import Sidebar from "../../components/layout/sidebar/Sidebar";
+import { BackButton } from "../../components/shared/BackButton";
 import "./about.css";
 
 function About() {
   return (
     <>
-      <Sidebar />
-      <main>
+     <BackButton url={"/19031985"}/>
+   
         <div className="documentation">
-          <h1>Documentation</h1>
+          <section className="section heading">
 
+          <h1>Documentation</h1>
           <p>
             Bienvenue sur <strong>Data Pilote by Square</strong>, l'application
             idéale pour saisir, gérer et intégrer vos données dans des tableaux
             et piloter votre entreprise.
           </p>
+          </section>
           <h2>Introduction</h2>
           <p>
             <strong>Data Pilote by Square</strong> est une application
@@ -114,7 +117,7 @@ function About() {
             pour obtenir de l'aide.
           </p>
         </div>
-      </main>
+     
     </>
   );
 }

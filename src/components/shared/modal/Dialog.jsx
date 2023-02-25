@@ -26,12 +26,12 @@ function Dialog({ btn, children, addIcone, editIcone }) {
       <FaPlusCircle/> {btn}
       </button>
       {!modal ? (
-        <div className="overlay">
+        <div onClick={toogleModal} className="overlay">
           <div className="modal">
             <button
               onKeyUp={toogleModal}
               onClick={toogleModal}
-              className='close_modal'
+              className='btn-close'
             >
             <AiOutlineClose/>
             </button>

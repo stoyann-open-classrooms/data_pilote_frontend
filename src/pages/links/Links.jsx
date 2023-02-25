@@ -9,15 +9,18 @@ import { toast } from "react-toastify";
 import Sidebar from "../../components/layout/sidebar/Sidebar";
 import Card from "../../components/shared/card/Card";
 import HeaderLinks from "../../components/links/HeaderLinks";
+import { BackButton } from "../../components/shared/BackButton";
 
 function Links() {
   const [copied, setCopied] = useState(false);
   const onCopy = () => {
-    toast.success("lien copiée dans le press papier");
+    toast.success("lien copiée dans le presse papier");
   };
   return (
     <>
-      <Sidebar />
+
+    <BackButton url={'/19031985'}/>
+     
       <main>
         <Hero title={"Gerer les liens"} />
    

@@ -63,7 +63,7 @@ button {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #2d3231 transparent #2d3231 transparent;
+  border-color: #0c3631 transparent #0c3631 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }

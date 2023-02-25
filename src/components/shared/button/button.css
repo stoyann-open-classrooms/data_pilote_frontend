@@ -61,11 +61,11 @@ button {
 }
 
 .btn-primary {
-  background-color: #2d3231;
+  background-color: #0c3631;
 }
 
 .btn-secondary {
-  background-color: #878ec3;
+  background-color: rgb(47, 172, 104);
 }
 
 .delete-btn {

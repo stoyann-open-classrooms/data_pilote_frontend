@@ -6,7 +6,7 @@
   position: absolute;
   color: $text;
   border-radius: 1rem;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   background-color: $primary;
   top: 50%;
   left: 50%;
@@ -16,6 +16,10 @@
   width: 100%;
   transform: translate(-50%, -50%);
   color: white;
+
+  h2 {
+    margin-top: 3rem;
+  }
 }
 
 .overlay {
@@ -41,17 +45,5 @@
 
 }
 
-.close_modal {
-  background-color: transparent !important;
-  position: absolute;
-  color: white;
-   right: 2rem;
 
-   top: 1rem;
-   font-size: 2rem;
-   width: 20px;
-   &:hover{
-    color: red;
-   }
-}
 

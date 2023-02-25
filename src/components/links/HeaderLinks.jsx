@@ -25,13 +25,13 @@ function HeaderLinks() {
   }, []);
   if (!isLoading) {
     return (
-      <div className="header-link">
-        <p>
-          Tableaux horodatés : <span>{horodatedTable.count}</span>{" "}
-        </p>
-        <p>
-          Tableaux Static : <span>{staticTable.count} </span>{" "}
-        </p>
+      <div className="ticket-page">
+        <hr />
+        <h2>Tableaux horodatés : <span>{horodatedTable.count}</span></h2>
+      
+          <h2>Tableaux statiques <span>{staticTable.count} </span></h2>
+       
+      <hr />
       </div>
     );
   } else {

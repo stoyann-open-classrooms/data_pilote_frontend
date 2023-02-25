@@ -41,18 +41,18 @@ export default function LinkItem({
   return (
     <Card horodated={horodated}>
       <h3>{item.title}</h3>
-      <div className="details">
+    
+      <div className="ticket">
         <p>
-          <FaCalendarPlus />
-          <span>{new Date(item.createdAt).toLocaleDateString()}</span>{" "}
+          créer le : {new Date(item.createdAt).toLocaleDateString()}
         </p>
         <p>
-          <FaCalendarCheck />
-          <span>{new Date(item.updatedAt).toLocaleDateString()}</span>{" "}
+         
+        Modifiée le :   {new Date(item.updatedAt).toLocaleDateString()}
         </p>
         <p>
-          {" "}
-          <BiTable /> <span> {item.tableType}</span>{" "}
+         
+         type de tableau :  {item.tableType}
         </p>
       </div>
 
@@ -240,7 +240,7 @@ export default function LinkItem({
         )}
       </div>
 
-      <CopyToClipboard text={`/item.link`}>
+      <CopyToClipboard text={process.env.REACT_APP_BASE_URL + item.link}>
         <button className="copy-link-btn" onClick={onCopy}>
           
           <BiLink className="copy-icone" /> Copier le lien

@@ -5,11 +5,13 @@ import NewStaticTable from "../../components/newTable/NewStaticTable";
 import NewHoradedTable from "../../components/newTable/NewHoradedTable";
 import Hero from "../../components/layout/hero/Hero";
 import Sidebar from "../../components/layout/sidebar/Sidebar";
+import { BackButton } from "../../components/shared/BackButton";
 function NewTable() {
   return (
     <>
-      <Sidebar />
+     
       <main>
+        <BackButton url={'/19031985'}/>
         <Hero title={"Créer un nouveaux tableau de données"} />
         <div className="btn-container">
           <Dialog btn={"Tableau statique"}>
