@@ -240,7 +240,7 @@ export default function LinkItem({
         )}
       </div>
 
-      <CopyToClipboard text={process.env.REACT_APP_BASE_URL + item.link}>
+      <CopyToClipboard text={process.env.REACT_APP_BASE_FRONT_URL + item.link}>
         <button className="copy-link-btn" onClick={onCopy}>
           
           <BiLink className="copy-icone" /> Copier le lien

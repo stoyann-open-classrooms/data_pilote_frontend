@@ -26,7 +26,7 @@ function Dialog({ btn, children, addIcone, editIcone }) {
       <FaPlusCircle/> {btn}
       </button>
       {!modal ? (
-        <div onClick={toogleModal} className="overlay">
+        <div  className="overlay">
           <div className="modal">
             <button
               onKeyUp={toogleModal}
