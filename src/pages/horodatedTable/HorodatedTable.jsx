@@ -6,6 +6,7 @@ import Dialog from "../../components/shared/modal/Dialog";
 import axios from "axios";
 import { toast } from "react-toastify";
 import HorodatedLineContext from "../../context/HorodateLineContext";
+import { BackButton } from "../../components/shared/BackButton";
 
 
 
@@ -93,6 +94,7 @@ function HorodatedTable() {
   if (!loading) {
     return (
       <>
+      <BackButton url={'/19031985/links'}/>
         <div className="table-page-container">
           <div className="table-page-hero">
             <div className="table-page-hero-text">

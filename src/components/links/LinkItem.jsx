@@ -27,7 +27,7 @@ export default function LinkItem({
   });
 
   const onCopy = () => {
-    toast.success("lien copiée dans le press papier");
+    toast.success("Le lien a été copié avec succès dans le presse-papier.");
   };
 
   const handleInput = ({ currentTarget }) => {
