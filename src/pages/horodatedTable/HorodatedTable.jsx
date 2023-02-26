@@ -49,6 +49,8 @@ function HorodatedTable() {
     fetchHorodatedTable();
   }, []);
 
+
+
   const handleInput = ({ currentTarget }) => {
     const { name, value } = currentTarget;
     setEntry({
@@ -65,7 +67,7 @@ function HorodatedTable() {
 
   const createEntry = async (data) => {
     const response = await axios
-      .post(process.env.REACT_APP_BASE_FRONT_URL + "/horodated_lines", data)
+      .post(process.env.REACT_APP_BASE_URL + "/horodated_lines", data)
       .then((res) => {
         // Work with the response...
         toast.success(`La nouvelle entrée  à étè créer avec succées`);
@@ -84,7 +86,7 @@ function HorodatedTable() {
 
   const fetchHorodatedTable = async () => {
     const response = await fetch(
-     process.env.REACT_APP_BASE_FRONT_URL + `/horodated_tables/${params.id}`
+     process.env.REACT_APP_BASE_URL + `/horodated_tables/${params.id}`
     );
     const data = await response.json();
     setTable(data.data);
