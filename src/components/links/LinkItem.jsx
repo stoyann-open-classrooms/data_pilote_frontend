@@ -52,7 +52,7 @@ export default function LinkItem({
         </p>
         <p>
          
-         type de tableau :  {item.tableType}
+         Type de tableau :  {item.tableType}
         </p>
       </div>
 

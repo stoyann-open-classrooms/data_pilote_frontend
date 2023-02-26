@@ -93,8 +93,7 @@ function About() {
             budgets trimestriels, etc. Par exemple, vous pouvez créer un tableau
             horodaté pour suivre les ventes hebdomadaires de votre entreprise :
           </p>
-          <p>ICI CAPTURE D'ECRAN</p>
-          <img src="" alt="" />
+ 
           <p>
             La fréquence des horodatages est journaliéres. Les horodatages sont
             automatiquement créés pour chaque nouvelle ligne de données entrée
@@ -312,9 +311,7 @@ function About() {
           <p>
           Pour une meilleure compréhension, voici une capture d'écran du tableau de données avec la modale pour ajouter une nouvelle entrée :
           </p>
-          <p>
-          Capture d'écran du tableau de données avec la modale pour ajouter une nouvelle entrée
-          </p>
+       
           <p>
           La capture d'écran montre le tableau de données avec la modale pour ajouter une nouvelle entrée. Les champs du tableau sont visibles et vous pouvez entrer des données correspondantes. Le bouton "Enregistrer" est également visible en bas de la modale pour sauvegarder les modifications.
           </p>

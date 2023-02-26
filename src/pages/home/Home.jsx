@@ -11,7 +11,7 @@ function Home() {
        
              <p>Merci de choisir une option ci-dessous</p>
         </section>
-        <a href="https://app.powerbi.com/reportEmbed?reportId=b9af4049-08ee-4dcf-8dee-5f5fb82f1fb0&autoAuth=true&ctid=b4295fcf-972b-41c0-98f3-3d7586b2e7db">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiODg4ODAyYTQtMDEyOS00NTAxLThjYWMtZmFmODc4MTQ5NGY4IiwidCI6ImI0Mjk1ZmNmLTk3MmItNDFjMC05OGYzLTNkNzU4NmIyZTdkYiIsImMiOjEwfQ%3D%3D">
           <button className='btn btn-block'>
          Voir le rapport
         </button>
